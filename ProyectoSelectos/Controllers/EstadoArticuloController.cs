@@ -13,7 +13,7 @@ namespace ProyectoSelectos.Controllers
 {
     public class EstadoArticuloController : Controller
     {
-        private ProyectoFinal db = new ProyectoFinal();
+        private ProyectoDBContext db = new ProyectoDBContext();
 
         // GET: EstadoArticulo
         public ActionResult Index()

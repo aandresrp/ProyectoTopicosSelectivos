@@ -29,4 +29,11 @@ namespace ProyectoSelectos.Models
         [Required(ErrorMessage = "El estado es requerido")]
         public int estado { get; set; }
     }
+
+    public class ProyectoDBContext : DbContext
+    {
+        public DbSet<Persona> Persona { get; set; }
+        public DbSet<Articulo> Articulo { get; set; }
+        public DbSet<EstadoArticulo> EstadoArticulo { get; set; }
+    }
 }

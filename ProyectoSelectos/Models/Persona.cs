@@ -34,4 +34,6 @@ namespace ProyectoSelectos.Models
         public int tipo { get; set; }
     }
 
+
+
 }

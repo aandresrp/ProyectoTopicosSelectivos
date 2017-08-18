@@ -12,7 +12,7 @@ namespace ProyectoSelectos.Controllers
 {
     public class PersonaController : Controller
     {
-        private ProyectoFinal db = new ProyectoFinal();
+        private ProyectoDBContext db = new ProyectoDBContext();
 
         // GET: Persona
         public ActionResult Index()
@@ -106,7 +106,7 @@ namespace ProyectoSelectos.Controllers
         public ActionResult ConfirmarEliminar(int idPersona)
         {
             Persona persona = db.Persona.Find(idPersona);
-            db.Articulo.Remove(persona);
+            db.Persona.Remove(persona);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

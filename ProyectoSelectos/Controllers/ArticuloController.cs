@@ -12,7 +12,7 @@ namespace ProyectoSelectos.Controllers
 {
     public class ArticuloController : Controller
     {
-        private ProyectoFinal db = new ProyectoFinal();
+        private ProyectoDBContext db = new ProyectoDBContext();
 
         // GET: Articulo
         public ActionResult Index()
@@ -48,7 +48,7 @@ namespace ProyectoSelectos.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Articulos.Add(Articulo);
+                db.Articulo.Add(Articulo);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
